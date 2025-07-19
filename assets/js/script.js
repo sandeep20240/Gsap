@@ -2,7 +2,7 @@ const toggleBtn = document.getElementById("toggleBtn");
 const closebtn = document.getElementById("closebtn");
 gsap.registerPlugin(ScrollTrigger);
 
-// Define the timeline ONCE, paused & reversed
+// Navbar
 const tl = gsap.timeline({ paused: true, reversed: true });
 
 tl.to("#navbar", {
@@ -68,52 +68,7 @@ ctaBtn.addEventListener("mouseleave", () => {
     gsap.to(ctaBtn, { rotation: 0, duration: 0.2, ease: "power2.inOut" });
 });
 
-// Slider
-const tl2 = gsap.timeline();
-tl2.to(".main", {
-    y: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out",
-    scrollTrigger: {
-        trigger: ".main", 
-        end: "top 50%",     
-        scrub: true,           
-    }
-})
 
-
-// Slider
-
-gsap.to(".imagesContainer", {
-    width: "100%",
-    duration: 2,
-    stagger: 2,
-    ease: "power2.inOut",
-})
-
-gsap.to(".textContainer h1", {
-    ease: "power2.inOut",
-    duration: 2,
-    stagger: 2,
-    top: 0
-})
-
-gsap.to(".textContainer h1", {
-    delay: 2,
-    ease: "power2.inOut",
-    duration: 2,
-    stagger: 2,
-    top: "-100%"
-})
-
-gsap.to(".imagesContainer img", {
-    delay: 2,
-    ease: "power2.inOut",
-    duration: 2,
-    stagger: 2,
-    width: "0%"
-})
 
 
 
@@ -149,6 +104,50 @@ tl4.from(".card1", {
 
 ScrollTrigger.refresh();
 
+
+
+// Slider
+// const tl2 = gsap.timeline();
+// tl2.to(".main", {
+//     y: 0,
+//     opacity: 1,
+//     duration: 1,
+//     ease: "power2.out",
+//     scrollTrigger: {
+//         trigger: ".main", 
+//         end: "top 50%",     
+//         scrub: true,           
+//     }
+// })
+// gsap.to(".imagesContainer", {
+//     width: "100%",
+//     duration: 2,
+//     stagger: 2,
+//     ease: "power2.inOut",
+// })
+
+// gsap.to(".textContainer h1", {
+//     ease: "power2.inOut",
+//     duration: 2,
+//     stagger: 2,
+//     top: 0
+// })
+
+// gsap.to(".textContainer h1", {
+//     delay: 2,
+//     ease: "power2.inOut",
+//     duration: 2,
+//     stagger: 2,
+//     top: "-100%"
+// })
+
+// gsap.to(".imagesContainer img", {
+//     delay: 2,
+//     ease: "power2.inOut",
+//     duration: 2,
+//     stagger: 2,
+//     width: "0%"
+// })
 
 
 
