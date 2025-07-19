@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    cursor: pointer;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #000; */
+    color: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+
+/* Navbar */
+#navbar {
+    right: -450px;
+    position: fixed;
+    top: 0;
+    width: 450px;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+
+}
+
+#navbar ul li {
+    position: relative;
+}
+
+#navbar ul li::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0px;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+}
+
+#navbar ul li:hover:after {
+    opacity: 1;
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Hero Section */
+#hero {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/tech3.jpg");
+    object-fit: cover;
+    background-position: 50% 65%;
+    background-size: cover;
+}
+
+#heroText {
+    /* -webkit-text-stroke: 1px white;
+    color: transparent; */
+    top: 300px;
+    height: 150px;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+/* Slider */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.center {
+    border-radius: 10px;
+    position: relative;
+    width: 55%;
+    height: 80%;
+    /* background-color: rgb(125, 129, 126); */
+    overflow: hidden;
+}
+
+.imagesContainer {
+    position: absolute;
+    /* background-color: rgb(51, 124, 153); */
+    height: 100%;
+    width: 0%;
+    overflow: hidden;
+}
+
+.imagesContainer img {
+    height: 100% !important;
+    /* width: 100%; */
+    object-fit: cover;
+}
+
+.textContainer {
+    /* background-color: white; */
+    position: absolute;
+    left: 10%;
+    transform: translateY(50%);
+    bottom: 50%;
+    overflow: hidden;
+    height: 80px;
+    width: 700px;
+    z-index: 999;
+}
+
+.textContainer h1 {
+    top: 100px;
+    position: absolute;
+    font-size: 4em;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+#heroSection {
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
